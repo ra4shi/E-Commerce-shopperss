@@ -1,0 +1,84 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forms</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #f8fafc;
+      }
+      .container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      .form-select:focus {
+        border-color: #8d1b3d !important;
+        box-shadow: 0 0 0 0.2rem rgba(141, 27, 61, 0.25) !important;
+      }
+      .form-input:focus {
+        border-color: #8d1b3d !important;
+        box-shadow: 0 0 0 0.2rem rgba(141, 27, 61, 0.25) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="my-4 text-center">Forms</h2>
+      <!-- General elements -->
+      <h4 class="mb-4 font-weight-bold text-center">Edit Status</h4>
+      <form action="" method="post">
+        <div class="card shadow-lg mb-5">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select
+                class="form-control"
+                id="status"
+                name="status"
+              >
+                <option><%=orderData.status%></option>
+                <option>Placed</option>
+                <option>Pending</option>
+                <option>Shipped</option>
+                <option>Delivered</option>
+              </select>
+            </div>
+            <button
+              class="btn btn-primary mt-4"
+              type="submit"
+            >
+              Submit
+            </button>
+            <% if(typeof message != 'undefined'){ %>
+              <p style="color: red;font-family: Georgia, 'Times New Roman', Times, serif;"><%=message%></p>
+            <% } %>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <!-- Bootstrap JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+  ></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+  ></script>

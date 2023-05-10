@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopperss &mdash; Colorlib e-Commerce Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    <header class="site-navbar" role="banner">
+      <div class="site-navbar-top">
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+              <form action="" class="site-block-top-search">
+                <span class="icon icon-search2"></span>
+                <input type="text" class="form-control border-0" placeholder="Search">
+              </form>
+            </div>
+
+            <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+              <div class="site-logo">
+                <a href="/home" class="js-logo-clone">Shopperss</a>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 order-3 order-md-3 text-right">
+              <div class="site-top-icons">
+                <ul>
+                  <li><a href="#"><span class="icon icon-person"></span></a></li>
+                  <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li>
+                    <a href="/cart" class="site-cart">
+                      <span class="icon icon-shopping_cart"></span>
+                      <span class="count">2</span>
+                    </a>
+                  </li> 
+                  <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
+                </ul>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+      </div> 
+      <nav class="site-navigation text-right text-md-center" role="navigation">
+        <div class="container">
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li class="has-children">
+              <a href="/home">Home</a>
+             
+            </li>
+            <li class="has-children">
+              <a href="about.html">About</a>   
+            </li>
+            <li><a href="shop">Shop</a></li>
+            <li><a href="/showOrder">Orders</a></li>
+            <li><a href="/shop">New Arrivals</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/wishlist">Whishlist</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bootstrap Form</title>
+
+
+
+<div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+
+          <h1 class="mb-0 bread">Add Address</h1>
+          <section class="ftco-section contact-section bg-light">
+            <div class="container">
+              
+               
+        
+                  <form action="" class="bg-white p-5 contact-form" method="post">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="userName" id="input1" placeholder="Your Name" required>
+                      <p id="para1" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <input type="number" class="form-control" name="mobile" id="input2" placeholder="Your mobile" required>
+                      <p id="para2" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <input type="number" class="form-control" name="alterMobile" id="input3" placeholder="Your Alternative number" required>
+                      <p id="para3" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <textarea name="address" id="input4" class="col-md-12" rows="3" placeholder="Enter Address"></textarea>
+                      <p id="para4" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="input5" name="city" placeholder="Your city" class="form-control" required>
+                      <p id="para5" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="input6" name="state" placeholder="Your state" class="form-control" required>
+                      <p id="para6" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <input type="number" id="input7" name="pincode" placeholder="Your pincode" class="form-control" required>
+                      <p id="para7" style="color: red;"></p>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="input8" name="landmark" placeholder="Your landmark" class="form-control" required>              
+                      <p id="para8" style="color: red;"></p>
+                    </div>
+                    <div class="form-group text-center">
+                      <input type="submit" onclick="show()" value="Register" class="btn btn-primary py-3 px-5">
+                    </div>
+                    <div class="text-center">
+                      <%
+                    if(typeof message != 'undefined'){
+                      %>
+                      <p style="color: green;"><%=message%></p>
+                      <%
+                    }
+                    %>
+                   
+                  </form>
+                
+                </div>
+             
+            </div>
+          </section> 
+
+        </div>
+      </div>
+    
+      
+
+        </div>
+      </div>
+    
+  
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+
+  <style>
+  .bg-light {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+</style>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+
+<script src="js/main.js"></script>
+  <script>
+    function show(){
+  let input1 = document.getElementById('input1').value;
+  let para1 = document.getElementById('para1');
+  if(input1==''){
+    para1.innerText = "Enter something"
+  }
+  let input2 = document.getElementById('input2').value;
+  let para2 = document.getElementById('para2');
+  if(input2==''){
+    para2.innerText = "Enter something"
+  }
+  let input3 = document.getElementById('input3').value;
+  let para3 = document.getElementById('para3');
+  if(input3==''){
+    para3.innerText = "Enter something"
+  }
+  let input4 = document.getElementById('input4').value;
+  let para4 = document.getElementById('para4');
+  if(input4==''){
+    para4.innerText = "Enter something"
+  }
+}
+  </script>
+</body>
+</html>

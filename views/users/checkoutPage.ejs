@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopperss &mdash; Colorlib e-Commerce Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+	
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    <header class="site-navbar" role="banner">
+      <div class="site-navbar-top">
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+              <form action="" class="site-block-top-search">
+                <span class="icon icon-search2"></span>
+                <input type="text" class="form-control border-0" placeholder="Search">
+              </form>
+            </div>
+
+            <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+              <div class="site-logo">
+                <a href="/home" class="js-logo-clone">Shopperss</a>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 order-3 order-md-3 text-right">
+              <div class="site-top-icons">
+                <ul>
+                  <li><a href="#"><span class="icon icon-person"></span></a></li>
+                  <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li>
+                    <a href="/cart" class="site-cart">
+                      <span class="icon icon-shopping_cart"></span>
+                      <span class="count">2</span>
+                    </a>
+                  </li> 
+                  <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
+                </ul>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+      </div> 
+      <nav class="site-navigation text-right text-md-center" role="navigation">
+        <div class="container">
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li class="has-children">
+              <a href="index.html">Home</a>
+              <ul class="dropdown">
+                <li><a href="#">Menu One</a></li>
+                <li><a href="#">Menu Two</a></li>
+                <li><a href="#">Menu Three</a></li>
+                <li class="has-children">
+                  <a href="#">Sub Menu</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Menu One</a></li>
+                    <li><a href="#">Menu Two</a></li>
+                    <li><a href="#">Menu Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="about.html">About</a>
+              <ul class="dropdown">
+                <li><a href="#">Menu One</a></li>
+                <li><a href="#">Menu Two</a></li>
+                <li><a href="#">Menu Three</a></li>
+              </ul>
+            </li>
+            <li><a href="shop.html">Shop</a></li>
+			<li><a href="/showOrder">Orders</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+			<li><a href="/wishlist">Whishlist</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="/home">Home</a> <span class="mx-2 mb-0"></span> <a href="/cart">Cart</a> <span class="mx-2 mb-0"></span> <strong class="text-black">Checkout</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="bread"><span><a href="index.html">Home</a></span>  <span>Checkout</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+		<div class="container">
+		  <div class="row no-gutters slider-text align-items-center justify-content-center">
+			<div class="col-md-9 ftco-animate text-center">
+				<p class="breadcrumbs"><span class="mr-2"><a href="/home">Home</a></span> <span>About</span></p>
+				<h1 class="mb-0 bread">Checkout</h1>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	
+	  <div class="row">
+		<div class="col-md-6">
+		  <div style="margin-left: 300px;margin-top: 200px;">
+			<div class="row" style="display: flex; justify-content: space-between;">
+				<div class="horizontal" >
+					<h3 class="mb-4 mt-3">LOGIN</h3>
+					<p class=""><span>Name</span>:&nbsp;&nbsp;&nbsp;<span style="color: black;"><%=userName.name%></span></p>
+					<p class="mb-4"><span>Email</span>:&nbsp;&nbsp;&nbsp;<span style="color: black;"><%=userName.email%></span></p>
+					<p><a href="/logout" class="btn-custom">Logout and sign in to another account</a></p>
+				</div>
+				<div class="horizontal">
+					<p class="mb-4 mt-3">Advantages of Secure Login</p>
+					<br>
+					<p class="m-0" style="color: black;">Easy Trach Orders,Hassle free Returns</p>
+					<p class="m-0" style="color: black;">Get Relevant Alerts and Recommentation</p>
+					<p class="m-0" style="color: black;">Wishlists,Reviews,Rating and More</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-6" style="margin-left: 300px;margin-top: 100px;background-color: rgb(235, 235, 235);">
+		  <div style="display: flex; justify-content: end;"><a href="/addAddress"><button class="btn btn-danger m-5">Add Address</button></a></div>
+		  <form action="" id="checkout-form">
+		  <div class="row">
+		 <%
+		 if(address != 0){
+			address.forEach((add)=>{
+			  %>
+			   <div class="col-md-12 d-flex ftco-animate">
+				<div class="col-md-1">
+				  <input type="radio" value="<%=add.userName%>,<%=add.address%>,<%=add.city%>,<%=add.state%>,<%=add.pincode%>" name="selectAddress">
+				</div>
+				  <div class="blog-entry align-self-stretch">
+					<div class="text d-block pl-md-4">
+					  <div class="meta">
+						<div><p><span style="color: black;">Name: </span><%=add.userName%></p></div><br>
+						<div><p><span style="color: black;">Mobile: </span><%=add.mobile%></p></div><br>
+						<div><p><span style="color: black;">Alternative Number: </span><%=add.alternativeMob%></p></div><br>
+					  </div>
+					  <h3 class="heading" style="color: #dbcc8f;"><p>ADDRESS</p></h3>
+					  <p><%=add.address%> <%=add.city%> <%=add.state%> <%=add.pincode%></p>
+					  <p><%=add.landmark%></p>
+					  
+					  <p><a href="/removeAddress?id=<%=add._id%>" class="btn btn-primary py-2 px-3">Remove Address</a></p>
+					</div>
+				  </div>
+				</div>
+			  
+		   
+			  <%
+			})
+		 }else{
+		  %>
+		  <div class="row">
+			<p class="pl-5" style="color: red;"><%=message%></p>
+		  </div>
+		  <%
+		 }
+		 %>
+		  
+		</div>
+		</div>
+		
+		<div class="col-md-4" style="margin-left: 300px;margin-top: 200px;">
+		  <div class="row">
+			  <div class="horizontal" style="margin-bottom: 100px">
+				  <h3 class="mb-4 mt-3">PAYMENT</h3>
+				  <div class="mb-5">
+					<input type="radio" id="COD" value="COD" name="payment">
+					<label for="COD" style="color: black;margin: 0;">COD</label><br>
+					<small style="margin-left: 17px;">Free delivery charge</small>
+				  </div>
+				  <div>
+					<input type="radio" id="onlinePayment" value="onlinePayment" name="payment">
+					<label for="onlinePayment" style="color: black;margin: 0;">Online Payment</label><br>
+					<small style="margin-left: 17px;">UPI,Net Banking,Credit Card...</small>
+				  </div>
+			  </div>
+		  </div>
+		  <div style="margin-bottom: 150px;">
+			<button style="font-size: 20px;padding: 10px 80px 10px 80px;" type="submit" class="btn btn-danger">Place Order</button>
+		</div>
+		  </div>
+		</div>
+		
+		<div class="col-md-6">
+		  <div style="margin-top: 200px;">
+			<div style="margin-left: 160px;" class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+			  <div class="cart-total mb-3">
+				<h2 class="mb-4" style="color: #dbcc8f;">Cart Totals</h2>
+				<p class="d-flex">
+				  <span>Subtotal</span>
+				  <span>₹ <%=Total%></span>
+				</p>
+				<p class="d-flex">
+				  <span>Delivery</span>
+				  <span>₹0.00</span>
+				</p>
+				<hr>
+				<p class="d-flex total-price">
+				  <span>Total</span>
+				  <span id="gt2"><%=Total%></span>
+				</p>
+			  </div>
+			</div>
+		  </form>
+			<div style="margin-left: 160px;" class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+			  <div class="cart-total mb-3">
+				<h2 class="mb-4" style="color: #dbcc8f;">Apply coupon</h2>
+				<form>
+				  <label for="coupon" style="color: black;padding-bottom: 20px;">Coupon Code</label>
+				  <input style="border: 1px solid rgb(172, 172, 172);margin: 10px;border-radius: 8px;padding: 8px;" id="code" type="text" placeholder="enter coupon code">
+				  <button type="button" class="btn btn-primary" onclick="applycoupon($('#code').val())">Apply</button>
+				</form>
+				<hr>
+				<p class="d-flex total-price">
+				  <span>Total</span>
+				  <span id="gt2"><%=Total%></span>
+				</p>
+				<p class="d-flex total-price">
+				  <span>discount</span>
+				  <span id="gt3">0</span>
+				</p>
+				<hr>
+				<p class="d-flex total-price">
+				  <span>Wallet</span>
+				  <span id="gt5"><%=userName.wallet%></span>
+				</p>
+				<hr>
+				<p class="d-flex total-price">
+				  <span>Total</span>
+				  <span id="gt4"><%=grandTotal%></span>
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	
+	  </div>
+	
+	
+	<script>
+	  $("#checkout-form").submit((e)=>{
+		const amount = document.getElementById("gt4").innerHTML;
+		const amount2 = document.getElementById("gt2").innerHTML;
+		const discount = document.getElementById("gt3").innerHTML;
+		let address = $("input[name=selectAddress]:checked").val();
+		let payment = $("input[name=payment]:checked").val();
+		e.preventDefault();
+		$.ajax({
+		  url:"/checkout",
+		  method:"post",
+		  data:{
+			amount:amount,
+			total:amount2,
+			discount:discount,
+			address:address,
+			payment:payment
+		  },
+		  success:(response)=>{
+			if(response.codSuccess==true){
+			  location.href = "/orderSuccess";
+			}else{
+			  razorpayPayment(response.order);
+			}
+		  }
+		})
+	  })
+	
+	  function razorpayPayment(order){
+	
+			  var options = {
+				  "key": "rzp_test_2gNBJtL41koWDQ", // Enter the Key ID generated from the Dashboard
+				  "amount": order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+				  "currency": "INR",
+				  "name": "Acme Corp", //your business name
+				  "description": "Test Transaction",
+				  "image": "https://example.com/your_logo",
+				  "order_id": order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+				  "handler": function (response){
+					  verifyPayment(response, order);
+				  },
+				  "prefill": {
+					  "name": "Gaurav Kumar", //your customer's name
+					  "email": "gaurav.kumar@example.com",
+					  "contact": "9000090000"
+				  },
+				  "notes": {
+					  "address": "Razorpay Corporate Office"
+				  },
+				  "theme": {
+					  "color": "#3399cc"
+				  }
+			  };
+			  var rzp1 = new Razorpay(options);
+				  rzp1.open();
+			}
+	  function verifyPayment(payment,order){
+		const amount = document.getElementById("gt4").innerHTML;
+		const amount2 = document.getElementById("gt2").innerHTML;
+		$.ajax({
+		  url:"/verifyPayment",
+		  method:"post",
+		  data:{
+			payment,
+			amount,
+			amount2,
+			order
+		  },
+		  success:(response)=>{
+			if(response.success){
+			  location.href = '/orderSuccess';
+			}else{
+			  alert('payment failed');
+			}
+		  }
+		})
+	  }
+	
+	  function applycoupon(code){
+		const amount = document.getElementById('gt4').innerHTML;
+		console.log(amount);
+		$.ajax({
+		  url:"/applyCoupon",
+		  data:{  
+			code:code,
+			amount:amount
+		  },
+		  method:"post",
+		  success:(response)=>{
+			console.log(response);
+			if(response.user){
+			  console.log("This User already used this coupon");
+			  Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'This coupon already used!'
+				  })
+			}else if(response.maxUsers){
+			  console.log("coupon limit exceeded");
+			  Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'coupon limit exceeded!'
+				  })
+			}else if(response.status){
+			  console.log("This coupon now not in use");
+			  Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'coupon limit exceeded!'
+				  })
+			}else if(response.cartAmount){
+			  console.log("You cant use the coupon...Buy more");
+			  Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'You cant use the coupon...Buy more'
+				  })
+			}else if(response.date){
+			  console.log("coupon date expired");
+			  Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'date expired!!!'
+				  })
+			}else if(response.amountOkey){
+			  console.log("discount granded");
+			  document.getElementById('gt3').innerHTML = response.disAmount
+			  document.getElementById('gt4').innerHTML = response.disTotal
+			  console.log("done");
+			  Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: 'Discount redeemed',
+				showConfirmButton: false,
+				timer: 1500
+			  })
+			}else if(response.invalid){
+			  console.log("invalid coupon");
+			  Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Invalid Coupon!!!'
+				  })
+			}
+		  }
+		})
+	  }
+	
+	</script>
+
+
+	
+
+
+
+	
+	
+
+  </script>
+  <script src="jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

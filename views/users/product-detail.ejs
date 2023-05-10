@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopperss &mdash; Colorlib e-Commerce Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    <header class="site-navbar" role="banner">
+      <div class="site-navbar-top">
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+              <form action="" class="site-block-top-search">
+                <span class="icon icon-search2"></span>
+                <input type="text" class="form-control border-0" placeholder="Search">
+              </form>
+            </div>
+
+            <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+              <div class="site-logo">
+                <a href="/home" class="js-logo-clone">Shopperss</a>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 order-3 order-md-3 text-right">
+              <div class="site-top-icons">
+                <ul>
+                  <li><a href="#"><span class="icon icon-person"></span></a></li>
+                  <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li>
+                    <a href="/cart" class="site-cart">
+                      <span class="icon icon-shopping_cart"></span>
+                      <span class="count">2</span>
+                    </a>
+                  </li> 
+                  <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
+                </ul>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+      </div> 
+      <nav class="site-navigation text-right text-md-center" role="navigation">
+        <div class="container">
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li class="has-children">
+              <a href="/home">Home</a>
+              <ul class="dropdown">
+                <li><a href="#">Menu One</a></li>
+                <li><a href="#">Menu Two</a></li>
+                <li><a href="#">Menu Three</a></li>
+                <li class="has-children">
+                  <a href="#">Sub Menu</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Menu One</a></li>
+                    <li><a href="#">Menu Two</a></li>
+                    <li><a href="#">Menu Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="about.html">About</a>
+              <ul class="dropdown">
+                <li><a href="#">Menu One</a></li>
+                <li><a href="#">Menu Two</a></li>
+                <li><a href="#">Menu Three</a></li>
+              </ul>
+            </li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/showOrder">Orders</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/wishlist">Whishlist</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+
+<div class="colorlib-product">
+    <div class="container">
+        <div class="row row-pb-lg product-detail-wrap">
+            <div class="col-sm-8">
+                <div class="owl-carousel">
+                    <% for(let i=0;i<detail.image.length;i++){%>
+                    <div class="item">
+                        
+                        <div class="product-entry border">
+                            
+                            <a href="#" class="prod-img">
+                                <img width="800px" height="800px" src="admin/img/<%=detail.image[i] %>"  alt="Free html5 bootstrap 4 template">
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                    <%}%>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="product-desc">
+                    <h3><%=detail.name%></h3>
+                    <p class="price">
+                        <span>$<%=detail.price%></span> 
+                        <span class="rate">
+                            <i class="icon-star-full"></i>
+                            <i class="icon-star-full"></i>
+                            <i class="icon-star-full"></i>
+                            <i class="icon-star-full"></i>
+                            <i class="icon-star-half"></i>
+                            (74 Rating)
+                        </span>
+                    </p>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                    <div class="size-wrap">
+                        <div class="block-26 mb-2">
+                            <h4>Size</h4>
+                       <ul>
+                          <li><a href="#">7</a></li>
+                          <li><a href="#">7.5</a></li>
+                          <li><a href="#">8</a></li>
+                          <li><a href="#">8.5</a></li>
+                          <li><a href="#">9</a></li>
+                          <li><a href="#">9.5</a></li>
+                          <li><a href="#">10</a></li>
+                          <li><a href="#">10.5</a></li>
+                          <li><a href="#">11</a></li>
+                          <li><a href="#">11.5</a></li>
+                          <li><a href="#">12</a></li>
+                          <li><a href="#">12.5</a></li>
+                          <li><a href="#">13</a></li>
+                          <li><a href="#">13.5</a></li>
+                          <li><a href="#">14</a></li>
+                       </ul>
+                    </div>
+                    <div class="block-26 mb-4">
+                            <h4>Width</h4>
+                       <ul>
+                          <li><a href="#">M</a></li>
+                          <li><a href="#">W</a></li>
+                       </ul>
+                    </div>
+                    </div>
+                    <!-- <form action=""  method="" > -->
+             <div class="input-group mb-4">
+                 <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn" onclick="decreaseQuantity()" data-type="minus" data-field="">
+                   <i class="icon-minus2"></i>
+                    </button>
+                    </span>
+                 <input type="number" id="quantity" name="count" class="form-control input-number" value="1" min="1" max="100">
+                 <span class="input-group-btn ml-1">
+                    <button type="button" class="quantity-right-plus btn" onclick="increaseQuantity()" data-type="plus" data-field="">
+                     <i class="icon-plus2"></i>
+                 </button>
+                 </span>
+              </div>
+            
+              <div class="row">
+                  <div class="col-sm-12 text-center">
+                            <button class="btn btn-primary" onclick="ToCart('<%=detail._id%>')" >Add To cart</button>
+                        <!-- <input type="submit" class="btn btn-primary" onclick="ToCart('<%=detail._id%>')"  value="Add to Cart" > -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- </form> -->
+        <!-- ............................. -->
+
+        
+        
+        <script>
+          function decreaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            if (quantityInput.value > 1) {
+              quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+          }
+        
+          function increaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+          }
+        </script>
+        
+
+
+
+        <!-- .................................... -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-12 pills">
+                        <div class="bd-example bd-example-tabs">
+                          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+                            <li class="nav-item">
+                              <a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Description</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Manufacturer</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">Review</a>
+                            </li>
+                          </ul>
+
+                          <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane border fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+                              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                                <ul>
+                                    <li>The Big Oxmox advised her not to do so</li>
+                                    <li>Because there were thousands of bad Commas</li>
+                                    <li>Wild Question Marks and devious Semikoli</li>
+                                    <li>She packed her seven versalia</li>
+                                    <li>tial into the belt and made herself on the way.</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-pane border fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
+                              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                            </div>
+
+                            <div class="tab-pane border fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+                              <div class="row">
+                                   <div class="col-md-8">
+                                       <h3 class="head">23 Reviews</h3>
+                                       <div class="review">
+                                           <div class="user-img" style="background-image: url(images/person1.jpg)"></div>
+                                           <div class="desc">
+                                               <h4>
+                                                   <span class="text-left">Jacob Webb</span>
+                                                   <span class="text-right">14 March 2018</span>
+                                               </h4>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-half"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                   </span>
+                                                   <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+                                               </p>
+                                               <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+                                           </div>
+                                       </div>
+                                       <div class="review">
+                                           <div class="user-img" style="background-image: url(images/person2.jpg)"></div>
+                                           <div class="desc">
+                                               <h4>
+                                                   <span class="text-left">Jacob Webb</span>
+                                                   <span class="text-right">14 March 2018</span>
+                                               </h4>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-half"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                   </span>
+                                                   <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+                                               </p>
+                                               <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+                                           </div>
+                                       </div>
+                                       <div class="review">
+                                           <div class="user-img" style="background-image: url(images/person3.jpg)"></div>
+                                           <div class="desc">
+                                               <h4>
+                                                   <span class="text-left">Jacob Webb</span>
+                                                   <span class="text-right">14 March 2018</span>
+                                               </h4>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-half"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                   </span>
+                                                   <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+                                               </p>
+                                               <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="col-md-4">
+                                       <div class="rating-wrap">
+                                           <h3 class="head">Give a Review</h3>
+                                           <div class="wrap">
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       (98%)
+                                                   </span>
+                                                   <span>20 Reviews</span>
+                                               </p>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       (85%)
+                                                   </span>
+                                                   <span>10 Reviews</span>
+                                               </p>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       (70%)
+                                                   </span>
+                                                   <span>5 Reviews</span>
+                                               </p>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       (10%)
+                                                   </span>
+                                                   <span>0 Reviews</span>
+                                               </p>
+                                               <p class="star">
+                                                   <span>
+                                                       <i class="icon-star-full"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       <i class="icon-star-empty"></i>
+                                                       (0%)
+                                                   </span>
+                                                   <span>0 Reviews</span>
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="site-footer border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="footer-heading mb-4">Navigations</h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <ul class="list-unstyled">
+                <li><a href="#">Sell online</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Shopping cart</a></li>
+                <li><a href="#">Store builder</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <ul class="list-unstyled">
+                <li><a href="#">Mobile commerce</a></li>
+                <li><a href="#">Dropshipping</a></li>
+                <li><a href="#">Website development</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <ul class="list-unstyled">
+                <li><a href="#">Point of sale</a></li>
+                <li><a href="#">Hardware</a></li>
+                <li><a href="#">Software</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <h3 class="footer-heading mb-4">Promo</h3>
+          <a href="#" class="block-6">
+            <img src="images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
+            <h3 class="font-weight-light  mb-0">Finding Your Perfect Shoes</h3>
+            <p>Promo from  nuary 15 &mdash; 25, 2019</p>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="block-5 mb-5">
+            <h3 class="footer-heading mb-4">Contact Info</h3>
+            <ul class="list-unstyled">
+              <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+              <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+              <li class="email">emailaddress@domain.com</li>
+            </ul>
+          </div>
+
+          <div class="block-7">
+            <form action="#" method="post">
+              <label for="email_subscribe" class="footer-heading">Subscribe</label>
+              <div class="form-group">
+                <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
+                <input type="submit" class="btn btn-sm btn-primary" value="Send">
+              </div>
+            </form>
+          </div>  
+        </div>
+      </div>
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-md-12">
+          <p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<script>
+    function ToCart(id){
+        console.log(id+'this is Id ');
+
+$.ajax({
+url:'/product-detail',
+method:'post',
+data:{
+  product_id:id
+},
+success:(response)=>{
+     if(response.success){         
+      Swal.fire({
+position: 'center',
+icon: 'success',
+title: 'Added to Cart',
+showConfirmButton: false,
+timer: 1500
+})
+     }
+ }
+
+})
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+
+<script src="js/main.js"></script>
+  
+</body>
+</html>
+
+
