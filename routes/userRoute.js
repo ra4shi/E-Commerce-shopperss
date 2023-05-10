@@ -82,7 +82,7 @@ user_route.get('/ShowCatagory',categoryController.ShowCatagory)
 
 user_route.post('/applyCoupon',couponController.applyCoupon);
 
-
+user_route.post('/shop',userController.searchproduct)
 
 
 user_route.get('/wishlist',auth.isLogin,wishlistController.loadWishlist);

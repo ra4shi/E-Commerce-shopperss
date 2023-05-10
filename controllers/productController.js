@@ -23,8 +23,7 @@ const insertProduct=async(req,res)=>{
             description:req.body.description,
             stock:req.body.stock,
             size:req.body.size,
-            item:req.body.item,
-            color:req.body.color
+           
        })
           await newproduct.save()
 
@@ -81,8 +80,7 @@ const addeditProduct = async (req,res)=>{
             Category: req.body.Category,
             stock: req.body.stock,
             size: req.body.size,
-            item: req.body.item,
-            color:req.body.color,
+            
             image: image,
             description: req.body.description,
             }})

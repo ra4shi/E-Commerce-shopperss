@@ -30,10 +30,12 @@
           <div class="row align-items-center">
 
             <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
-              <form action="" class="site-block-top-search">
-                <span class="icon icon-search2"></span>
-                <input type="text" class="form-control border-0" placeholder="Search">
+              <form method="post" class="site-block-top-search">
+
+                <input type="text" class="form-control border-0" name="search" placeholder="Search">
+                <input type="submit" value="Search">
               </form>
+              
             </div>
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
@@ -64,35 +66,12 @@
       <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
-            <li class="has-children">
-              <a href="home">Home</a>
-              <ul class="dropdown">
-                <li><a href="#">Menu One</a></li>
-                <li><a href="#">Menu Two</a></li>
-                <li><a href="#">Menu Three</a></li>
-                <li class="has-children">
-                  <a href="#">Sub Menu</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Menu One</a></li>
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="has-children">
-              <a href="/about">About</a>
-              <ul class="dropdown">
-                <li><a href="#">Menu One</a></li>
-                <li><a href="#">Menu Two</a></li>
-                <li><a href="#">Menu Three</a></li>
-              </ul>
-            </li>
-            <li class="active"><a href="shop">Shop</a></li>
-            <li><a href="/showOrder">Orders</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/wishlist">Whishlist</a></li>
+            <li><a href="/home">Home</a></li>
+		  <li><a href="/about">About</a></li>  
+      <li><a href="/shop">Shop</a></li>
+			<li><a href="/showOrder">Orders</a></li>
+      <li><a href="/contact">Contact</a></li>
+			<li><a href="/wishlist">Whishlist</a></li>
           </ul>
         </div>
       </nav>
@@ -130,7 +109,7 @@
                   <h3 class="mb-3 h6 text-uppercase text-black d-block">filter</h3>
                   <ul>
                     <li><a href="/filter?value1=0&value2=1500">0 to 1500</a></li>
-                    <li><a href="/filter?value2=1500&value2=5000">1500 to 5000</a></li>
+                    <li><a href="/filter?value1=1500&value2=5000">1500 to 5000</a></li>
                     <i class="bi bi-person"></i>
                   </ul>
                 </div>
@@ -331,4 +310,42 @@ const id = document.getElementById('hlt').value
   </script>
     
   </body>
+  <style>
+    .site-block-top-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.site-block-top-search .icon {
+  margin-right: 10px;
+}
+
+.site-block-top-search input[type="text"],
+.site-block-top-search input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .site-block-top-search {
+    max-width: 100%;
+  }
+}
+
+  </style>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
 </html>

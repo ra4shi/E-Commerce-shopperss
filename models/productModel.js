@@ -30,14 +30,7 @@ const ProductSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    item:{
-        type: String,
-        required: true
-    },
-    color:{
-        type: String,
-        required: true
-    },
+    
     is_block:{
         type: Boolean, 
         default: false 

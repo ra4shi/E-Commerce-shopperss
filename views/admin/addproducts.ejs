@@ -59,20 +59,15 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="/admin/products" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Products</a>
-                    <a href="/admin/coupon" class="nav-item nav-link"><i class="fa fa-th me-2"></i>coupon</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="/admin/home" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/admin/products" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Products</a>
+                    <a href="/admin/listcoupon" class="nav-item nav-link"><i class="fa fa-th me-2"></i>coupon</a>
+                    <a href="/admin/orders" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Order</a>
+                    <a href="/admin/viewbanner" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Banner</a>
                     <a href="/admin/user" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Users</a>
-                    <a href="/admin/Product" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Product</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
-                        </div>
+                    <a href="/admin/category" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Category</a>
+
+                      
                     </div>
                 </div>
             </nav>
@@ -220,25 +215,18 @@
                               <br>
                               
                            
-                            <label class="block text-sm">
-                              <span class="text-gray-700 dark:text-gray-400">Color</span>
-                              <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="color" />
-                            </label>
-                          <br>
-
-                          <br>
-                            <br>
-                            <label class="block text-sm">
-                              <span class="text-gray-700 dark:text-gray-400">Item</span>
-                              <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="item" />
-                            </label>
-                          <br>
+                           
                           <br>
                           
-                            <label class="block text-sm">
-                              <span class="text-gray-700 dark:text-gray-400">Stock</span>
-                              <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="number" name="stock" />
-                            </label>
+                          <label class="block text-sm">
+                            <span class="text-gray-700 dark:text-gray-400">Stock</span>
+                            <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" 
+                                   type="number" 
+                                   name="stock" 
+                                   oninput="this.value = Math.max(0, parseInt(this.value) || 1);" 
+                            />
+                          </label>
+                          
                             
                             <br />
                             

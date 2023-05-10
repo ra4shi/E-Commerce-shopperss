@@ -230,7 +230,7 @@ const verfyLogin = async ( req,res)=>{
 
             req.session.user_id = userData._id;
             req.session.hid='page-1-link'
-            req.session.limit= 2
+            req.session.limit= 4
 
             res.redirect('/home')
         }
@@ -375,15 +375,13 @@ const shop=async (req,res)=>{
         const value2 = parseInt(req.session.value2)
 
         if (req.session.category) {
-            console.log('100')
+           
             if (req.session.sort && req.session.value1 && req.session.value2) {
 
                 const data = await Product.find({ Category: req.session.category, price: { $gte: value1, $lte: value2 } }).sort({ price: req.session.sort }).skip(req.session.stx).limit(req.session.limit)
                 const total = await Product.find({ Category: req.session.category, price: { $gte: value1, $lte: value2 } })
                 const size= Math.ceil(total.length/req.session.limit)
-                res.render('shop', { dataa: data ,tagId:req.session.hid,size})
-
-                console.log('200')
+                res.render('shop', { dataa: data ,tagId:req.session.hid,size}) 
                 req.session.sort = null
                 req.session.value1 = null
                 req.session.value2 = null
@@ -394,7 +392,7 @@ const shop=async (req,res)=>{
 
             }
             else if (req.session.sort == null && req.session.value1 && req.session.value2) {
-                console.log('300')
+                
 
                 const data = await Product.find({ Category: req.session.category, price: { $gte: value1, $lte: value2 } }).skip(req.session.stx).limit(req.session.limit)
                 const total = await Product.find({ Category: req.session.category, price: { $gte: value1, $lte: value2 } })
@@ -410,7 +408,7 @@ const shop=async (req,res)=>{
 
             }
             else if (req.session.sort && req.session.value1 == null && req.session.value2 == null) {
-                console.log('400');
+                
                 const data = await Product.find({ Category: req.session.category }).sort({ price: req.session.sort }).skip(req.session.stx).limit(req.session.limit)
                 const total = await Product.find({ Category: req.session.category })
                 const size= Math.ceil(total.length/req.session.limit)
@@ -425,6 +423,7 @@ const shop=async (req,res)=>{
 
             }
             else if (req.session.sort == null && req.session.value1 == null && req.session.value2 == null) {
+                
                
                 const data = await Product.find({ Category: req.session.category }).skip(req.session.stx).limit(req.session.limit)
                 const total = await Product.find({ Category: req.session.category })
@@ -452,6 +451,8 @@ const shop=async (req,res)=>{
             }
             else if (req.session.sort == null && req.session.value1 && req.session.value2) {
                
+                console.log(req.session.value2);
+                console.log(req.session.value1);
 
                 const data = await Product.find({ price: { $gte: value1, $lte: value2 } }).skip(req.session.stx).limit(req.session.limit)
                 const total = await Product.find({ price: { $gte: value1, $lte: value2 } })
@@ -484,7 +485,7 @@ const shop=async (req,res)=>{
                 const data = await Product.find().skip(req.session.stx).limit(req.session.limit)
                 const total = await Product.find()
                 const size= Math.ceil(total.length/req.session.limit)
-                console.log(req.session.limit);
+                
                 res.render('shop', { dataa: data,tagId:req.session.hid,size })
                 req.session.limit= null
                 req.session.page= null
@@ -504,17 +505,23 @@ const category = async (req, res) => {
     req.session.category = req.query.category
     res.redirect('/shop')
 }
+
+
 const sort = async (req, res) => {
 
 
     req.session.sort = req.query.sort
     res.redirect('/shop')
 }
+
+
 const filter = async (req, res) => {
 
 
     req.session.value1 = req.query.value1
     req.session.value2 = req.query.value2
+    
+
     res.redirect('/shop')
 }
 
@@ -527,11 +534,8 @@ const pagination = async(req,res)=>{
        
        req.session.hid=id
        req.session.stx= (page-1)*req.session.limit
-       console.log(req.session.limit);
-       console.log( req.session.stx);
        res.redirect('/shop')
-    //    const products = await product.find().skip(stx).limit(limit) 
-    //    res.render('shop',{dataa:products})
+
     } catch (error) {
         console.log(error.message);
     }
@@ -566,7 +570,7 @@ const checkoutee = async (req, res) => {
     try {
 
         const cartdata = await Cart.findOne({ userId: req.session.user_id })
-
+      
         // const data = await address.findOne({ userId: req.session.user_id })
         const couponcode = await coupon.find()
         const total = req.session.total
@@ -598,6 +602,31 @@ const loadProfile = async (req,res)=>{
     }
 }
 
+const searchproduct =async (req,res)=>{
+    try {
+ 
+     const searchValue =req.body.search
+     console.log(req.body.search);
+     console.log(searchValue);
+     const search =searchValue.trim()
+ 
+     if(search!=''){
+         const data =await Product.find({$and:[{name:{$regex: `^${search}`,$options:'i'}}]});
+         const total = await Product.find()
+         const size= Math.ceil(total.length/req.session.limit)
+         
+             res.render('shop',{dataa: data,tagId:req.session.hid,size})
+     }  
+   }
+     catch (error) {
+ 
+     console.log(error.message);
+     
+    }
+   
+ 
+ }
+
 
 module.exports = {
 
@@ -622,6 +651,7 @@ module.exports = {
     category,
     filter,
     sort,
-    pagination
+    pagination,
+    searchproduct
     
 }

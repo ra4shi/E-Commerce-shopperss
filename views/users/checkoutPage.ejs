@@ -31,12 +31,7 @@
         <div class="container">
           <div class="row align-items-center">
 
-            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
-              <form action="" class="site-block-top-search">
-                <span class="icon icon-search2"></span>
-                <input type="text" class="form-control border-0" placeholder="Search">
-              </form>
-            </div>
+            
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
@@ -47,12 +42,12 @@
             <div class="col-6 col-md-4 order-3 order-md-3 text-right">
               <div class="site-top-icons">
                 <ul>
-                  <li><a href="#"><span class="icon icon-person"></span></a></li>
-                  <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li><a href="/profile"><span class="icon icon-person"></span></a></li>
+                  <li><a href="/wishlist"><span class="icon icon-heart-o"></span></a></li>
                   <li>
                     <a href="/cart" class="site-cart">
                       <span class="icon icon-shopping_cart"></span>
-                      <span class="count">2</span>
+                     
                     </a>
                   </li> 
                   <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
@@ -66,34 +61,12 @@
       <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
-            <li class="has-children">
-              <a href="index.html">Home</a>
-              <ul class="dropdown">
-                <li><a href="#">Menu One</a></li>
-                <li><a href="#">Menu Two</a></li>
-                <li><a href="#">Menu Three</a></li>
-                <li class="has-children">
-                  <a href="#">Sub Menu</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Menu One</a></li>
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="has-children">
-              <a href="about.html">About</a>
-              <ul class="dropdown">
-                <li><a href="#">Menu One</a></li>
-                <li><a href="#">Menu Two</a></li>
-                <li><a href="#">Menu Three</a></li>
-              </ul>
-            </li>
-            <li><a href="shop.html">Shop</a></li>
+           
+            <li><a href="/home">Home</a></li>
+		  <li><a href="/about">About</a></li>  
+      <li><a href="/shop">Shop</a></li>
 			<li><a href="/showOrder">Orders</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="contact.html">Contact</a></li>
+      <li><a href="/contact">Contact</a></li>
 			<li><a href="/wishlist">Whishlist</a></li>
           </ul>
         </div>
@@ -116,7 +89,7 @@
 			<div class="row">
 				<div class="col">
 					<p class="bread"><span><a href="index.html">Home</a></span>  <span>Checkout</span></p>
-				</div>
+				</div>	
 			</div>
 		</div>
 	</div>
@@ -139,18 +112,12 @@
 		  <div style="margin-left: 300px;margin-top: 200px;">
 			<div class="row" style="display: flex; justify-content: space-between;">
 				<div class="horizontal" >
-					<h3 class="mb-4 mt-3">LOGIN</h3>
+					<h3 class="mb-4 mt-3">User Information </h3>
 					<p class=""><span>Name</span>:&nbsp;&nbsp;&nbsp;<span style="color: black;"><%=userName.name%></span></p>
 					<p class="mb-4"><span>Email</span>:&nbsp;&nbsp;&nbsp;<span style="color: black;"><%=userName.email%></span></p>
-					<p><a href="/logout" class="btn-custom">Logout and sign in to another account</a></p>
+					<p class="mb-4"><span>Mobile</span>:&nbsp;&nbsp;&nbsp;<span style="color: black;"><%=userName.mobile%></span></p>
 				</div>
-				<div class="horizontal">
-					<p class="mb-4 mt-3">Advantages of Secure Login</p>
-					<br>
-					<p class="m-0" style="color: black;">Easy Trach Orders,Hassle free Returns</p>
-					<p class="m-0" style="color: black;">Get Relevant Alerts and Recommentation</p>
-					<p class="m-0" style="color: black;">Wishlists,Reviews,Rating and More</p>
-				</div>
+				
 			</div>
 		</div>
 		
@@ -464,4 +431,14 @@
   <script src="js/main.js"></script>
     
   </body>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
 </html>

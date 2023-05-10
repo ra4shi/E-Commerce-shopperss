@@ -60,15 +60,7 @@
                     <a href="/admin/viewbanner" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Banner</a>
                     <a href="/admin/user" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Users</a>
                     <a href="/admin/category" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Category</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
-                        </div>
-                    </div>
+                   
                 </div>
             </nav>
         </div>
@@ -224,33 +216,17 @@
                         
                         <label class="block mt-4 text-sm">
                             <span class="text-gray-700 dark:text-gray-400">Description</span>
-                            <textarea name="description" class="block w-full mt-1 text-sm form-textarea dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" rows="2" placeholder=""  value="<%=newproduct.description%>" ></textarea>
+                            <textarea name="description" class="block w-full mt-1 text-sm form-textarea dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" rows="2" placeholder="" name="Description"  value="<%=newproduct.description[i]%>" ></textarea>
                           </label>
                           <br>
                           <br>
-                          <label class="block text-sm">
-                            <span class="text-gray-700 dark:text-gray-400">Size</span>
-                            <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"  type="text" name="Size" />
-                          </label>
-                          <br>
-                          <br>
-                          <label class="block text-sm">
-                            <span class="text-gray-700 dark:text-gray-400">Color</span>
-                            <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="color" />
-                          </label>
-
-                        
-                        <br>
-                        <br>
-                        <label class="block text-sm">
-                          <span class="text-gray-700 dark:text-gray-400">Item</span>
-                          <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="item" />
-                        </label>
+                          
+                          
 
                       <br>
                         <label class="block text-sm">
                           <span class="text-gray-700 dark:text-gray-400">Stock</span>
-                          <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="number" name="stock" />
+                          <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="number" name="stock" value="<%=newproduct.stock[i]%>" />
                         </label>
                         
                         <br />
