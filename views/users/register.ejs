@@ -23,8 +23,6 @@
             <span id="span-mobile" style="color: red;"></span>
             <input type="password" name="password" id="password" required placeholder="Password" />
             <span id="span-password" style="color: red;"></span><br>
-            <input type="password" name="confirm-password" id="confirm-password" required
-              placeholder="Confirm Password" />
             <span id="span-confirm-password" style="color: red;"></span><br>
 
             <% if(typeof error !==  "undefined" ){ %>
@@ -32,12 +30,12 @@
               <%= error %>
             </span>
             <% } %>
-            <button type="button" onclick="validate()" required>Register</button>
+            <input type="submit" onclick="validate()" required value="REGISTER" >
             <p class="message">Do you have an account? <a href="/login">Login here</a></p>
           </form>
 
           <% if (typeof message !== 'undefined') { %>
-          <p style="color: rgb(16, 16, 18);"><%= message %></p>
+          <p style="color: rgb(209, 19, 19);"><%= message %></p>
           <% } %>
         </div>
       </div>
@@ -139,16 +137,7 @@ function validate(){
  else{
      document.getElementById("span-password").innerText=""
  }
-
- if(confirmPassword==''){
-     document.getElementById('span-confirm-password').innerText='please must fill confirm password '
- }
- else if(password !== confirmPassword){
-     document.getElementById('span-confirm-password').innerText='password and confirm password must be same '
- }
- else{
-     document.getElementById("span-confirm-password").innerText=""
- }
+ 
 }
 console.log(validate)
 

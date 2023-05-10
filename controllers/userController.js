@@ -121,38 +121,43 @@ const loadRegister = async(req,res)=>{
 
 
 const insertUser = async(req,res)=>{
-
+    const email = req.body.email
+    const already = await User.findOne({email:email})
+    varemail = email
     try {
-        
-        const email = req.body.email
-        const already = await User.findOne({email:email})
-        varemail = email
-        const cpassword = req.body.confirmpassword
-        const spassword = await securePassword(req.body.password)
-        const user = new User({
-            name:req.body.name,
-            email:req.body.email,
-            mobile:req.body.mobile,
-            password:spassword,
-            is_admin:0,
+        if(already){
+            res.render('register',{message:'this email already used'})
+        }else{
+
+            const spassword = await securePassword(req.body.password)
+            const user = new User({
+                name:req.body.name,
+                email:req.body.email,
+                mobile:req.body.mobile,
+                password:spassword,
+                is_admin:0,
+                
+                
+            })
+    
+            const userData = await user.save();
             
-            
-        })
-
-        const userData = await user.save();
-        
-        if(userData){
-
-            const otpgenerator = Math.floor(1000+Math.random()*9999)
-            otp2 = otpgenerator
-
-            sendVerifyMail(req.body.name, req.body.email , userData._id,otpgenerator);
-
-            res.redirect('/verify')
-        } 
-        else {
-            res.render('register',{message:'Registration Has Been Failed..'})
+            if(userData){
+    
+                const otpgenerator = Math.floor(1000+Math.random()*9999)
+                otp2 = otpgenerator
+    
+                sendVerifyMail(req.body.name, req.body.email , userData._id,otpgenerator);
+    
+                res.redirect('/verify')
+            } 
+            else {
+                res.render('register',{message:'Registration Has Been Failed..'})
+            }
         }
+        
+       
+       
 
     } catch (error) {
         console.log(error.message);
@@ -612,7 +617,6 @@ const searchproduct =async (req,res)=>{
  
      if(search!=''){
          const data =await Product.find({$and:[{name:{$regex: `^${search}`,$options:'i'}}]});
-         const total = await Product.find()
          const size= Math.ceil(total.length/req.session.limit)
          
              res.render('shop',{dataa: data,tagId:req.session.hid,size})

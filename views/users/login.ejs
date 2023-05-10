@@ -16,9 +16,9 @@
           <span id="en1" style="color: red;"></span>
           <input type="password" name="password" id="password" required placeholder="Password" /><br>
           <span id="en2" style="color: red;"></span><br>
-          <% if(typeof error !=="undefined" ){ %>
+          <% if(typeof message !=="undefined" ){ %>
             <span style="color:red;">
-              <%= error %>
+              <%= message %>
             </span>
           <% } %>
           <input type="submit" class="login-button btn btn-primary" value="Login" required><br>
