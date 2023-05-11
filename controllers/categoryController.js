@@ -36,7 +36,12 @@ const addcategory = async (req,res) => {
     try {
 
         const newCategory = req.body.Category;
-        
+        const already = await Category.find({Category:Category})
+
+        if(already){
+            res.render('addcategory',{message:'this category already used'})
+        } else{
+
         const add = new Category({
            
             Category:newCategory,
@@ -48,7 +53,7 @@ const addcategory = async (req,res) => {
         if(data){
             res.redirect('/admin/category')
         }
-        
+    }
     } catch (error) {
         console.log(error.message);
     }
