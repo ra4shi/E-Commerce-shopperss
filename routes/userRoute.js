@@ -112,31 +112,29 @@ user_route.post('/addAddress',addressController.profileinsertAddress);
 
 user_route.get('/orderSuccess',auth.isLogin,orderController.orderSuccess);
 
-
 user_route.get('/showOrder',auth.isLogin,orderController.showOrder);
-
 
 user_route.get('/viewOrderProducts',orderController.viewOrderProducts);
 
-
 user_route.post('/checkout',orderController.placeOrder);
 
-
 user_route.post('/verifyPayment',orderController.verifyPayment);
-
 
 user_route.post('/cancelOrder',orderController.cancelOrder);
 
 user_route.get('/category',userController.category)
 
-
 user_route.get('/sort',userController.sort)
-
 
 user_route.get('/filter',userController.filter)
 
-
 user_route.get('/pagination',userController.pagination)
+
+
+
+user_route.get('/about',userController.about)
+
+user_route.get('/contact',userController.contact)
 
 
 module.exports = user_route;

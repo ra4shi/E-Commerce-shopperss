@@ -90,28 +90,43 @@ admin_route.post('/editProduct',upload.array('image',3),productController.addedi
 
 
 admin_route.get('/addCoupon',adminauth.isLogin,couponController.loadAddCoupon);
+
 admin_route.get('/listCoupon',adminauth.isLogin,couponController.listCoupon);
+
 admin_route.get('/editCoupon',adminauth.isLogin,couponController.loadEditProduct);
+
 admin_route.get('/deleteCoupon',adminauth.isLogin,couponController.deleteCoupon);
+
 admin_route.post('/addCoupon',couponController.postAddCoupon);
+
 admin_route.post('/editCoupon',couponController.postEditCoupon);
 
 
 
 admin_route.get("/addbanner",adminauth.isLogin,bannerController.addbanner)
+
 admin_route.post("/addbanner",adminauth.isLogin,upload.single("bannerimage"),bannerController.postaddbanner)
+
 admin_route.get("/viewbanner",adminauth.isLogin,bannerController.viewbanner)
+
 admin_route.post("/updatebanner",adminauth.isLogin,bannerController.bannerstatus)
+
 admin_route.get("/editbanner/:id",adminauth.isLogin,bannerController.editbanner)
+
 admin_route.post("/editbanner/:id",adminauth.isLogin,upload.single("bannerimage"),bannerController.posteditbanner)
 
 
 
 admin_route.get('/orders',adminauth.isLogin,orderController.adminShowOrder);
+
 admin_route.get('/editOrder',adminauth.isLogin,orderController.editOrder);
+
 admin_route.get('/viewProduct',adminauth.isLogin,orderController.viewProduct);
+
 admin_route.get('/exportOrder',adminauth.isLogin,orderController.exportOrder);
+
 admin_route.get('/sales',orderController.sales)
+
 admin_route.get('/exportOrderPDF',orderController.exportOrderPDF);
 
 admin_route.post('/editOrder',orderController.postEditOrder);

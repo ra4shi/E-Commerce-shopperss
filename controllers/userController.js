@@ -631,6 +631,22 @@ const searchproduct =async (req,res)=>{
  
  }
 
+ const about = async (req,res)=>{
+    try {
+        res.render('about')
+    } catch (error) {
+        console.log(error.message);
+    }
+ }
+
+ const contact = async (req,res)=>{
+    try {
+        res.render('contact')
+    } catch (error) {
+        console.log(error.message);
+    }
+ }
+
 
 module.exports = {
 
@@ -646,11 +662,11 @@ module.exports = {
     forgetPassworLoad,
     resetPassword,
     checkotp,
-   
+    contact,
     shop,
     singlepage,
     loadProfile,
-
+    about,
     checkoutee,
     category,
     filter,

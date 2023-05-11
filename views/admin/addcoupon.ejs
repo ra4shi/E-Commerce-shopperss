@@ -184,6 +184,7 @@
                         id="couponCount"
                         name="couponCount"
                         type="number"
+                        oninput="this.value = Math.max(1, parseInt(this.value) || 1);"
                         required
                       />
                       

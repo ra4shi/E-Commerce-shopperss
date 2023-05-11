@@ -28,7 +28,13 @@
         <div class="container">
           <div class="row align-items-center">
 
-          
+            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+              <form method="post" class="site-block-top-search">
+
+               
+              </form>
+              
+            </div>
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
@@ -39,17 +45,8 @@
             <div class="col-6 col-md-4 order-3 order-md-3 text-right">
               <div class="site-top-icons">
                 <ul>
-                  <li></span>
-                    <li class="has-children">
-                      <a href="#"><span class="icon icon-person">
-                      <ul class="dropdown">
-                        <li><a href="/logout">Logout</a></li>
-                        <li><a href="#">Profile</a></li>
-                        
-                      </ul>
-                    </li></a></li>
-                  
-                  <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li><a href="/profile"><span class="icon icon-person"></span></a></li>
+                  <li><a href="/wishlist"><span class="icon icon-heart-o"></span></a></li>
                   <li>
                     <a href="/cart" class="site-cart">
                       <span class="icon icon-shopping_cart"></span>
@@ -68,11 +65,11 @@
         <div class="container">
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li><a href="/home">Home</a></li>
-            <li><a href="/about">About</a></li>  
-            <li><a href="/shop">Shop</a></li>
-            <li><a href="/showOrder">Orders</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/wishlist">Whishlist</a></li>
+		  <li><a href="/about">About</a></li>  
+      <li><a href="/shop">Shop</a></li>
+			<li><a href="/showOrder">Orders</a></li>
+      <li><a href="/contact">Contact</a></li>
+			<li><a href="/wishlist">Whishlist</a></li>
           </ul>
         </div>
       </nav>
@@ -122,7 +119,7 @@
 										</td>
 										
 										<td class="price">₹<%=wish.productId.price%></td>
-										<td><button class="btn btn-primary" onclick="show('<%=wish.productId._id%>')" style="padding: 10px 30px;">Add To Cart</button></td>
+										<td> <button class="btn btn-success" onclick="ToCart('<%=wish.productId.id%>')" >Add to Cart</button></td>
 									  </tr>
 									<%
 								})
@@ -134,62 +131,44 @@
     		</div>
 			</div>
 		</section>
-		<script>
-		$(document).ready(function(){
+		
+    <script>
 
-		var quantitiy=0;
-		   $('.quantity-right-plus').click(function(e){
-		        
-		        // Stop acting like a button
-		        e.preventDefault();
-		        // Get the field name
-		        var quantity = parseInt($('#quantity').val());
-		        
-		        // If is not undefined
-		            
-		            $('#quantity').val(quantity + 1);
+document.getElementById(id).classList.add('active')
 
-		          
-		            // Increment
-		        
-		    });
-
-		     $('.quantity-left-minus').click(function(e){
-		        // Stop acting like a button
-		        e.preventDefault();
-		        // Get the field name
-		        var quantity = parseInt($('#quantity').val());
-		        
-		        // If is not undefined
-		      
-		            // Increment
-		            if(quantity>0){
-		            $('#quantity').val(quantity - 1);
-		            }
-		    });
-		    
-		});
-	</script>
-	<script>
-		function show(id){
-			$.ajax({
-				url:"/addFromWish",
-				method:"post",
-				data:{
-					query:id
-				},
-				success:(response)=>{
-					if(response.success){
-						location.href = "/cart";
-					}
-				}
-			})
-		}
-	</script>
+function ToCart(id){
+   
+         $.ajax({
+            url:'/hometoCart',
+            method:'post',
+            data:{
+        product_id:id
+            },
+            success:(response)=>{
+                   if(response.success){         
+          Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: ' Product Added To Cart',
+  showConfirmButton: false,
+  timer: 1500
+})
+                   }
+               }
+   
+         })
+      }
+    
+    
+        </script>
 
 
 </div>
 </body>
+
+
+
+
 <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -199,5 +178,10 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     
 </html>

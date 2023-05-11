@@ -189,11 +189,7 @@
             </h2>
             <!-- CTA -->
 
-            <div class="my-4">
-              <label for="filterDate" class="mr-2 font-semibold text-gray-600 dark:text-gray-300">Filter by Date:</label>
-              <input type="date" id="filterDate" class="px-2 py-1 border border-gray-300 rounded-md">
-              <button id="applyFilter" class="ml-2 px-3 py-1 bg-blue-500 text-white rounded-md"  style="color: black;">Apply</button>
-            </div>
+           
             
             
 
@@ -251,7 +247,7 @@
                   <td>
                     <div class="d-flex">
                       <div class="bg-success text-white rounded-pill px-3 py-1">
-                        <a href="/admin/editOrder?id=<%=orderData[orderData.length-i-1]._id%>" class="text-white">Edit</a>
+                        <a href="/admin/editOrder?id=<%=orderData[orderData.length-i-1]._id%>" onclick="return confirm('Are you sure you want to edit this order?')" class="text-white">Edit</a>
                       </div>
                     </div>
                   </td>
@@ -288,82 +284,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <script>
-         
-  $(document).ready(function() {
-    $('#applyFilter').click(function() {
-      var filterDate = $('#filterDate').val();
-
-      // Make an AJAX request to fetch the filtered data
-      $.ajax({
-        url: '/admin/filterOrders',
-        method: 'GET',
-        data: { date: filterDate },
-        success: function(data) {
-          // Update the table with the filtered data
-          updateTable(data);
-        },
-        error: function(xhr, status, error) {
-          console.error(error);
-        }
-      });
-    });
-
-    // Function to update the table with data
-    function updateTable(data) {
-      var tableBody = $('tbody');
-      tableBody.empty();
-
-      if (data.length > 0) {
-        for (var i = 0; i < data.length; i++) {
-          var order = data[i];
-          var row = '<tr>' +
-                      '<td>' +
-                        '<div class="d-flex align-items-center">' +
-                          '<div class="d-none d-md-block mr-3">' +
-                            '<div class="rounded-circle shadow-inner"></div>' +
-                          '</div>' +
-                          '<div>' +
-                            '<p class="font-weight-bold mb-0">' + order._id + '</p>' +
-                            '<p class="text-muted mb-0">User</p>' +
-                          '</div>' +
-                        '</div>' +
-                      '</td>' +
-                      '<td>' + order.date.substring(0, 10) + '</td>' +
-                      '<td>' +
-                        '<span class="badge badge-success">' + order.deliveryAddress + '</span>' +
-                      '</td>' +
-                      '<td><p>' + order.totalAmount + '</p></td>' +
-                      '<td><p>' + order.paymentMethod + '</p></td>' +
-                      '<td><p>' + order.status + '</p></td>' +
-                      '<td>' +
-                        '<div class="d-flex">' +
-                          '<div class="bg-success text-white rounded-pill px-3 py-1">' +
-                            '<a href="/admin/editOrder?id=' + order._id + '" class="text-white">Edit</a>' +
-                          '</div>' +
-                        '</div>' +
-                      '</td>' +
-                      '<td>' +
-                        '<div class="d-flex">' +
-                          '<div class="bg-primary text-white rounded-pill px-3 py-1">' +
-                            '<a href="/admin/viewProduct?id=' + order._id + '" class="text-white">View</a>' +
-                          '</div>' +
-                        '</div>' +
-                      '</td>' +
-                    '</tr>';
-          tableBody.append(row);
-        }
-      } else {
-        var noOrderRow = '<tr>' +
-                          '<td colspan="8">' +
-                            '<p class="text-center">Order not found</p>' +
-                          '</td>' +
-                        '</tr>';
-        tableBody.append(noOrderRow);
-      }
-    }
-  });
-</script>
+        
 
         <!-- Bootstrap JS -->
     <script

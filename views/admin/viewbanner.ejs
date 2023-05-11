@@ -195,8 +195,8 @@
                   <thead>
                     <tr>
                       <!-- <th> No</th> -->
-                      <th>No</th>
-                      <th>Heading</th>
+                      <th>No</th><br>
+                      <th>Heading</th><br>
                       <th>Discription</th>
                       <th>Image</th>
                       <th>status</th>
@@ -207,21 +207,21 @@
                   <tbody>
                     <%let count=1%> <%bannerData.forEach((banner)=>{%>
                     <tr>
-                      <td class="text-black"><%=count%></td>
-                      <td class="text-black"><%=banner.heading%></td>
-                      <td class="text-black"><%=banner.discription%></td>
+                      <td class="text-black"><%=count%></td><br><br>
+                      <td class="text-black"><%=banner.heading%></td><br><br>
+                      <td class="text-black"><%=banner.discription%></td><br>
                       <td class="text-black">
                         <img
                           src="/admin/img/<%=banner.image%>"
                           alt="product image"
                           style="width: 70px; height: 60px; border-radius: 0"
                         />
-                      </td>
-                      <td class="text-black"><%=banner.status%></td>
-                      <td class="text-black"><a href="/admin/editbanner/<%=banner._id%> " class="btn btn-info">Edit</a></td>
+                      </td><br>
+                      <td class="text-black"><%=banner.status%></td><br>
+                      <td class="text-black"><a href="/admin/editbanner/<%=banner._id%> "  onclick="return confirm('Are you sure you want to edit this banner?')" class="btn btn-info">Edit</a></td>
                       <td class="text-black">
                         <%if(banner.status==true){%>
-                        <button
+                        <button 
                           onclick="bannerstatus('<%=banner._id%>','false')"
                           class="btn btn-danger"
                         >

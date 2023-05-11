@@ -28,7 +28,13 @@
         <div class="container">
           <div class="row align-items-center">
 
-            
+            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+              <form method="post" class="site-block-top-search">
+
+               
+              </form>
+              
+            </div>
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
@@ -39,8 +45,8 @@
             <div class="col-6 col-md-4 order-3 order-md-3 text-right">
               <div class="site-top-icons">
                 <ul>
-                  <li><a href="#"><span class="icon icon-person"></span></a></li>
-                  <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li><a href="/profile"><span class="icon icon-person"></span></a></li>
+                  <li><a href="/wishlist"><span class="icon icon-heart-o"></span></a></li>
                   <li>
                     <a href="/cart" class="site-cart">
                       <span class="icon icon-shopping_cart"></span>
@@ -111,29 +117,10 @@
             
             <p class="mb-4"><%= productdata.description %></p>
             <p><strong class="text-primary h4">₹<%= productdata.price %></strong></p>
-            <div class="mb-1 d-flex">
-              <label for="option-sm" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm" name="shop-sizes"></span> <span class="d-inline-block text-black">Small</span>
-              </label>
-              <label for="option-md" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md" name="shop-sizes"></span> <span class="d-inline-block text-black">Medium</span>
-              </label>
-              <label for="option-lg" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg" name="shop-sizes"></span> <span class="d-inline-block text-black">Large</span>
-              </label>
-              <label for="option-xl" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-xl" name="shop-sizes"></span> <span class="d-inline-block text-black"> Extra Large</span>
-              </label>
-            </div>
+           
             <div class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-              </div>
-              <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              <div class="input-group-append">
-                <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-              </div>
+              
             </div>
 
             </div>
@@ -171,30 +158,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="images/cloth_3.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">T-Shirt Mockup</a></h3>
-                    <p class="mb-0">Finding perfect products</p>
-                    <p class="text-primary font-weight-bold">₹50</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="block-4 text-center">
-                  <figure class="block-4-image">
-                    <img src="images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="#">Corater</a></h3>
-                    <p class="mb-0">Finding perfect products</p>
-                    <p class="text-primary font-weight-bold">₹50</p>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -209,28 +173,7 @@
               <div class="col-md-12">
                 <h3 class="footer-heading mb-4">Navigations</h3>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#">Sell online</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Shopping cart</a></li>
-                  <li><a href="#">Store builder</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#">Mobile commerce</a></li>
-                  <li><a href="#">Dropshipping</a></li>
-                  <li><a href="#">Website development</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#">Point of sale</a></li>
-                  <li><a href="#">Hardware</a></li>
-                  <li><a href="#">Software</a></li>
-                </ul>
-              </div>
+             
             </div>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
