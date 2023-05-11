@@ -180,18 +180,23 @@
                                     <label for="exampleInputEmail1" class="form-label">Category Name</label>
                                     <input type="text" name="Category" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
+                                       
                                     <div id="emailHelp" class="form-text">
                                     </div>
                                 </div>
+
                                
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                 </div>
                                <input  type="submit" class="btn btn-primary" value="ADD" >
+                              
                             </form>
+                            
                         </div>
                     </div>
+                   
 
 
 
@@ -202,6 +207,10 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    </div>
+    </div>
+   
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -217,5 +226,8 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+<% if (typeof message !== 'undefined') { %>
+    <p style="color: rgb(209, 19, 19);"><%= message %></p>
+    <% } %>
 
 </html>
